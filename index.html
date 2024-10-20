@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive 2-Column Layout</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: Arial, sans-serif;
+            font-size: 20px;
+            color: Green;
+            margin: 0;
+            padding: 0;
+        }
+        
+        /* Navigation Bar Styles */
+        .nav {
+            background-color: #f0f0f0;
+            padding: 20px;
+            text-align: center;
+        }
+        .nav ul {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        .nav li {
+            margin-right: 20px;
+        }
+        
+        /* Basic Layout Styles */
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        /* Responsive 2-Column Layout Styles */
+        .two-column-layout {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+        .column-1, .column-2 {
+            flex-grow: 1;
+            flex-basis: 50%;
+            background-color: #f9f9f9;
+            padding: 20px;
+            margin: 10px;
+        }
+        
+        /* Media queries for responsiveness */
+        @media (max-width: 1200px) {
+            .column-1, .column-2 {
+                flex-basis: 60%;
+                margin: 10px auto;
+            }
+        }
+        
+        @media (max-width: 992px) {
+            .column-1, .column-2 {
+                flex-basis: 80%;
+                margin: 10px auto;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .two-column-layout {
+                flex-direction: column;
+            }
+            .column-1, .column-2 {
+                flex-basis: 100%;
+                margin: 10px 0;
+            }
+            .nav ul {
+                flex-direction: column;
+            }
+            .nav li {
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+        }
+       #footer {
+        background-color: Black;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+        clear: both;
+        
+        @media (max-width: 480px) {
+            .nav {
+                padding: 10px;
+            }
+            .container {
+                padding: 10px;
+            }
+            .two-column-layout {
+                padding: 10px;
+            }
+            .column-1, .column-2 {
+                padding: 10px;
+            }
+        }
+        
+        @media (max-width: 320px) {
+            body {
+                font-size: 16px;
+            }
+            .nav li {
+                margin-bottom: 5px;
+            }
+            .column-1, .column-2 {
+                padding: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+   <body>
+<header id="header">Welcome to AUSTEEN COMPUTERS Website!!!!</header>
+<div id="container">
+<nav>
+<h2>Navigation</h2>
+<ul>
+<li><a href="#">About Us</a></li>
+<li><a href="#">Services</a></li>
+<li><a href="#">Products</a></li>
+<li><a href="#">Contact Us</a></li>
+</ul>
+</nav>
+<section id="content">
+<h2>Who We Are</h2>
+<p>AUSTEEN COMPUTERS is a leading provider of innovative technology solutions. Our mission is to empower individuals and businesses with cutting-edge computing solutions.</p>
+<h2>Our Services</h2>
+<ul>
+<li>Computer Hardware and Software Sales</li>
+<li>IT Consulting and Support</li>
+<li>Network Installation and Maintenance</li>
+<li>Cyber Security Solutions</li>
+<li>Data Recovery and Backup Services</li>
+</ul>
+<h2>Our Products</h2>
+<ul>
+<li>Desktops and Laptops</li>
+<li>Smartphones and Tablets</li>
+<li>Printers and Scanners</li>
+<li>Gaming Consoles</li>
+<li>Software and Antivirus Solutions</li>
+</ul>
+<p>Why Choose Us?</p>
+<ul>
+<li>Expert Technical Support</li>
+<li>Competitive Pricing</li>
+<li>Quality Products</li>
+<li>Fast Delivery</li>
+<li>Customer-Centric Approach</li>
+</ul>
+    <div class="two-column-layout">
+        <div class="column-1">
+            <h2>Column 1</h2>
+            <p>This is the first column.</p>
+        </div>
+        <div class="column-2">
+            <h2>Column 2</h2>
+            <p>This is the second column.</p>
+        </div>
+    </div>
+    <footer id="footer">
+Copyright 2023 AUSTEEN COMPUTERS. All Rights Reserved.
+
+
+Contact Us: <a href="mailto:austeenakpotu@gmail.com">austeenakpotu@gmail.com</a> | 07064820492
+
+<br>
+  Follow Us:
+  </br>
+<a href="https://github.com/NTISHOR" target="_blank">GitHub</a> 
+  </footer>
+</body>
+</html>
